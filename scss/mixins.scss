@@ -1,0 +1,174 @@
+// FONT FAMILY
+@mixin main-font-regular() {
+  font-family: $main-font;
+  font-weight: 400;
+}
+
+@mixin main-font-medium() {
+  font-family: $main-font;
+  font-weight: 500;
+}
+
+@mixin main-font-semi-bold() {
+  font-family: $main-font;
+  font-weight: 600;
+}
+
+// TYPOGRAPHY
+@mixin h1-title($size, $color) {
+  font-size: $size;
+  color: $color;
+  @include main-font-medium();
+  @include adaptive-typography(40px, 45px, 50px);
+}
+
+@mixin h2-title($size, $color) {
+  @include h1-title($size, $color);
+  @include adaptive-typography(25px, 30px, 35px);
+}
+
+@mixin h3-title($size, $color) {
+  @include h1-title($size, $color);
+  @include adaptive-typography(23px, 25px, 30px);
+}
+
+@mixin h4-title($color: $main-color) {
+  @include main-font-semi-bold();
+  font-size: 18px;
+  color: $color;
+}
+
+@mixin ghost-text() {
+  font-size: 13px;
+  color: $ghost-color;
+  @include main-font-regular();
+}
+
+@mixin main-text($size: 15px, $color: $main-color) {
+  font-size: $size;
+  color: $color;
+  @include main-font-regular();
+  @include adaptive-typography(14px, 15px, 15px);
+}
+
+@mixin link-text() {
+  @include main-text($size: 15px, $color: $cosmos-color);
+  &:hover {
+    color: $hover-color;
+    text-decoration: underline;
+  }
+}
+
+@mixin adaptive-typography($fz-tablet, $fz-md, $fz-lg) {
+  @media (min-width: 480px) {
+    font-size: $fz-tablet;
+  }
+  @media (min-width: 768px) {
+    font-size: $fz-md;
+  }
+  @media (min-width: 1130px) {
+    font-size: $fz-lg;
+  }
+}
+
+// FRAME
+@mixin container() {
+  padding: 15px 20px;
+
+  @media (min-width: 1440px) {
+    padding: 20px 174px;
+  }
+}
+
+@mixin container-lg() {
+  padding: 20px 40px;
+
+  @media (min-width: 1024px) {
+    padding: 20px 120px;
+  }
+  @media (min-width: 1440px) {
+    padding: 20px 250px;
+  }
+}
+
+// BAGE
+@mixin bage($top, $bg) {
+  position: absolute;
+  top: $top;
+  left: -1px;
+
+  display: inline-block;
+  padding: 8px 10px;
+  padding-right: 0;
+
+  color: $light-color;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  background-color: $bg;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -20px;
+
+    width: 20px;
+    height: 50%;
+
+    background: linear-gradient(45deg, $bg 50%, transparent 50%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+
+    width: 20px;
+    height: 50%;
+
+    background: linear-gradient(-45deg, transparent 50%, $bg 50%);
+  }
+}
+
+@mixin button-light() {
+  padding: 12px 20px;
+
+  color: $cosmos-color;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+
+  cursor: pointer;
+  border: 1px solid $cosmos-color;
+  border-radius: 20px;
+  background-color: $light-color;
+  transition: color .2s ease-in-out,
+    background-color .2s ease-in-out,
+    border-color .2s ease-in-out,
+    box-shadow .2s ease-in-out;
+
+  &:hover, &:focus {
+    color: $hover-color;
+    border-color: $hover-color;
+    box-shadow: 0 0 0 1px $hover-color;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $hover-color;
+    color: $light-color;
+    outline: none;
+  }
+}
+// Миксин для скрытия элементов вместо display:none
+@mixin visually-hidden {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
