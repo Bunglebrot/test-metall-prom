@@ -1,0 +1,15 @@
+.title {
+  @include h1-title(30px, $secondary-color);
+}
+
+.subtitle {
+  @include h2-title(25px, $main-color);
+}
+
+.h3-subtitle {
+  @include h3-title(20px, $main-color);
+}
+
+.text {
+  @include main-text(15px, $main-color);
+}
