@@ -1,0 +1,33 @@
+{
+  "name": "test-metall-prom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bunglebrot/test-metall-prom.git"
+  },
+  "author": "Khittrov Nickolai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bunglebrot/test-metall-prom/issues"
+  },
+  "homepage": "https://github.com/Bunglebrot/test-metall-prom#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.2.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
