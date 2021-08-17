@@ -11,14 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Подключение swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <!--  -->
-
-  <!-- <link rel="stylesheet" href="./index.css"> -->
 </head>
 <body>
   <header class="header-block container">
     <a href="/">
-      <img src="./images/logotype.png" alt="">
+      <img src="" alt="">
     </a>
 
     <div class="header-block__phone-block phone-block">
@@ -94,10 +91,13 @@
     </section>
 
     <!-- Секция Рекомендуем посмотреть -->
-    <div class="products-cards-wrapper">
+    <div class="other-products-block__wrapper">
       <section class="container other-products-block">
-        <h2 class="subtitle">Рекомендуем посмотреть</h2>
-
+        <h2 class="other-products-block__title subtitle">Рекомендуем посмотреть</h2>
+        <div class="swiper__btn-wrapper container">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
         <!-- slider -->
         <div class="other-products-block__swiper">
           <div class="swiper-container">
@@ -106,17 +106,17 @@
               <!-- Slides -->
               <article class="swiper-slide other-products-block__card product-card">
                 <span class="product-card__label">Распродажа</span>
-                <img class="product-card__image" src="./images/some-product-1.jpg" alt="дом, сад, вечер">
+                <img class="product-card__image" src="" alt="">
                 <p class="product-card__description">Труба квадратная 60х60, толщина 4мм, 1м.пог.</p>
                 <p class="product-card__price">
-                  <span class="product-card__price_old">430 </span>
-                  <span class="product-card__price_bold">350</span>
+                  <span class="product-card__price_old">430</span>
+                  <span class="product-card__price_bold">&nbsp;350</span>
                   руб. за 1 пог. м
                 </p>
               </article>
               <article class="swiper-slide other-products-block__card product-card">
                 <span class="product-card__label_orange">Хит продаж</span>
-                <img class="product-card__image" src="./images/some-product-2.jpg" alt="дом, семья">
+                <img class="product-card__image" src="" alt="">
                 <p class="product-card__description">Прямозубые шестерни MZ1512 зубьев — 12, модуль...</p>
                 <p class="product-card__price">
                   <span class="product-card__price_bold">144,55</span>
@@ -125,7 +125,7 @@
               </article>
               <article class="swiper-slide other-products-block__card product-card">
                 <span class="product-card__label_new">Новинка</span>
-                <img class="product-card__image" src="./images/some-product-3.jpg" alt="дом, лужайка">
+                <img class="product-card__image" src="" alt="">
                 <p class="product-card__description">Металический шкаф PW-80.1</p>
                 <p class="product-card__price">
                   <span class="product-card__price_bold">12 500</span>
@@ -133,7 +133,7 @@
                 </article>
               <article class="swiper-slide other-products-block__card product-card">
                 <span class="product-card__label_new">Новинка</span>
-                <img class="product-card__image" src="./images/some-product-4.jpg" alt="дом, лужайка">
+                <img class="product-card__image" src="" alt="">
                 <p class="product-card__description">Перила с вертикальным заполнением</p>
                 <p class="product-card__price">
                   от
@@ -142,7 +142,7 @@
                 </article>
               <article class="swiper-slide other-products-block__card product-card">
                 <span class="product-card__label_new">Новинка</span>
-                <img class="product-card__image" src="./images/some-product-5.jpg" alt="дом, лужайка">
+                <img class="product-card__image" src="" alt="">
                 <p class="product-card__description">Трапецеидальные винты TR12X3X3000R</p>
                 <p class="product-card__price">
                   <span class="product-card__price_bold">3 192,40</span>
@@ -150,14 +150,14 @@
                 </article>
             </div>  
           </div>
-          <div class="swiper__btn-wrapper">
+          <!-- <div class="swiper__btn-wrapper">
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-          </div>
+          </div> -->
         </div>
       </section>
 
-      <article class="offer-discount">
+      <article class="offer-discount container">
         <div class="offer-discount__text-wrapper">
           <p class="h3-subtitle offer-discount__title">Хотите получить скидку?</p>
           <p class="offer-discount__text">Напишите нам об интересующих вас товарах или услугах и мы рассчитаем вашу персональную скидку!</p>
@@ -224,6 +224,5 @@
   </footer>
   <!-- Подключение swiper -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="./index.js"></script>
 </body>
 </html>
