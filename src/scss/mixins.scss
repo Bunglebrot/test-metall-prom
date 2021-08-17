@@ -98,12 +98,13 @@
   left: -1px;
 
   display: inline-block;
-  padding: 8px 10px;
+  padding: 5px 10px;
   padding-right: 0;
 
   color: $light-color;
   text-transform: uppercase;
   font-weight: 500;
+  font-size: 13px;
 
   background-color: $bg;
 
@@ -137,8 +138,9 @@
 
   color: $cosmos-color;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 16px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
 
   cursor: pointer;
   border: 1px solid $cosmos-color;
@@ -162,6 +164,16 @@
     outline: none;
   }
 }
+
+@mixin small-btn($bg-image, $bg-image-hover: $bg-image) {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  background-color: $light-color;
+}
+
 // Миксин для скрытия элементов вместо display:none
 @mixin visually-hidden {
   clip: rect(0 0 0 0); 
