@@ -9,18 +9,28 @@ const isProd = !isDev;
 const filename = ext => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
 module.exports = {
-    context: path.resolve(__dirname, './src'),
+    context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: './index.js',
 
     output: {
-        path: path.resolve(__dirname, './dist'),
-        filename: 'script.js'
+        assetModuleFilename: 'assets/[hash][ext]',
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'script.js',
+        publicPath: '',
+    },
+
+    devServer: {
+        historyApiFallback: true,
+        contentBase: path.resolve(__dirname, './dist'),
+        open: true,
+        compress: true,
+        hot: true,
+        port: 3000,
     },
 
     module: {
         rules: [
-
             {
                 test: /\.(s[ac]ss)$/i,
                 use: [
@@ -43,5 +53,5 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: `./css/${filename('css')}`
         })
-    ]
+    ],
 }
