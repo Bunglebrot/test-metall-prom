@@ -184,3 +184,11 @@
   white-space: nowrap; 
   width: 1px;
 }
+
+@mixin dots-span($width: 200px) {
+  display: inline-block;
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
